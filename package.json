@@ -22,7 +22,7 @@
     "express",
     "mongodb"
   ],
-  "author": "Professional Casino Developer",
+  "author": "Your GitHub Username",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
