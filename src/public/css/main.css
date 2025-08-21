@@ -227,8 +227,9 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('/images/hero-bg.jpg') center/cover;
-    opacity: 0.3;
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.8) 0%, rgba(218, 165, 32, 0.8) 100%), 
+                url('/images/banners/hero-bg.jpg') center/cover;
+    opacity: 0.9;
 }
 
 .hero-particles {
@@ -328,7 +329,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Features Section */
 .features {
     padding: 6rem 0;
-    background: var(--dark-color);
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(45, 45, 45, 0.9) 100%), 
+                url('/images/backgrounds/casino-atmosphere.jpg') center/cover;
+    position: relative;
 }
 
 .features-grid {
@@ -379,7 +382,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Games Preview Section */
 .games-preview {
     padding: 6rem 0;
-    background: var(--darker-color);
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%), 
+                url('/images/banners/casino-luxury.jpg') center/cover;
+    position: relative;
 }
 
 .games-grid {
@@ -407,13 +412,20 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     height: 200px;
     overflow: hidden;
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.3) 0%, rgba(218, 165, 32, 0.3) 100%);
 }
 
 .game-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.game-image img:hover {
+    filter: brightness(1.1) contrast(1.2);
+    transform: scale(1.05);
 }
 
 .game-card:hover .game-image img {
@@ -426,12 +438,13 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.8) 0%, rgba(218, 165, 32, 0.8) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(2px);
 }
 
 .game-card:hover .game-overlay {
@@ -485,7 +498,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .promo-card {
-    background: var(--gradient-secondary);
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(45, 45, 45, 0.9) 100%), 
+                var(--gradient-secondary);
     padding: 2rem;
     border-radius: var(--border-radius);
     display: flex;
@@ -493,11 +507,41 @@ h1, h2, h3, h4, h5, h6 {
     gap: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-card:nth-child(1) {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(45, 45, 45, 0.9) 100%), 
+                url('/images/banners/promo-welcome.jpg') center/cover;
+}
+
+.promo-card:nth-child(2) {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(45, 45, 45, 0.9) 100%), 
+                url('/images/banners/promo-vip.jpg') center/cover;
 }
 
 .promo-card:hover {
     transform: translateY(-5px);
     border-color: var(--secondary-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.promo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(218, 165, 32, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.promo-card:hover::before {
+    opacity: 1;
 }
 
 .promo-icon {
@@ -517,18 +561,22 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--accent-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .promo-content p {
-    color: var(--text-secondary);
+    color: var(--text-color);
     margin-bottom: 1rem;
     line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 /* Support Section */
 .support {
     padding: 6rem 0;
-    background: var(--darker-color);
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%), 
+                url('/images/backgrounds/casino-atmosphere.jpg') center/cover;
+    position: relative;
 }
 
 .support-content {
