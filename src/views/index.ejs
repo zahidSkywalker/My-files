@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Casino - Premium Gaming Experience</title>
+    <meta name="description" content="Experience the thrill of premium casino games at Royal Casino. Play slots, blackjack, roulette, poker and more with SSL Commerce secure payments.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-crown"></i>
+                <span>Royal Casino</span>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link active">Home</a>
+                <a href="/games" class="nav-link">Games</a>
+                <a href="/casino" class="nav-link">Live Casino</a>
+                <a href="#promotions" class="nav-link">Promotions</a>
+                <a href="#support" class="nav-link">Support</a>
+            </div>
+            <div class="nav-auth">
+                <button class="btn btn-outline" onclick="openModal('loginModal')">Login</button>
+                <button class="btn btn-primary" onclick="openModal('registerModal')">Register</button>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Royal Casino</span>
+                    <br>Where Fortune Meets Luxury
+                </h1>
+                <p class="hero-subtitle">
+                    Experience the most prestigious casino games with stunning graphics, 
+                    secure payments, and royal rewards. Join thousands of players worldwide.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="scrollToGames()">
+                        <i class="fas fa-play"></i>
+                        Play Now
+                    </button>
+                    <button class="btn btn-outline btn-large" onclick="openModal('registerModal')">
+                        <i class="fas fa-user-plus"></i>
+                        Join Free
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-cards">
+                    <div class="card card-1">
+                        <i class="fas fa-spade"></i>
+                    </div>
+                    <div class="card card-2">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="card card-3">
+                        <i class="fas fa-diamond"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Royal Casino?</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>100% Secure</h3>
+                    <p>SSL Commerce integration with bank-level security and encryption</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Premium Games</h3>
+                    <p>Exclusive casino games with stunning graphics and smooth gameplay</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Royal Rewards</h3>
+                    <p>Generous bonuses, VIP programs, and daily promotions</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support via live chat and email</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Preview Section -->
+    <section class="games-preview" id="games">
+        <div class="container">
+            <h2 class="section-title">Featured Games</h2>
+            <div class="games-grid">
+                <div class="game-card" data-aos="zoom-in">
+                    <div class="game-image">
+                        <img src="/images/games/royal-slots.jpg" alt="Royal Slots">
+                        <div class="game-overlay">
+                            <button class="btn btn-primary" onclick="playGame('royal-slots')">
+                                <i class="fas fa-play"></i> Play Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Royal Slots</h3>
+                        <p>5-reel slot machine with royal theme and massive payouts</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-star"></i> RTP: 96.5%</span>
+                            <span><i class="fas fa-fire"></i> High Volatility</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="game-image">
+                        <img src="/images/games/blackjack-royal.jpg" alt="Royal Blackjack">
+                        <div class="game-overlay">
+                            <button class="btn btn-primary" onclick="playGame('blackjack-royal')">
+                                <i class="fas fa-play"></i> Play Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Royal Blackjack</h3>
+                        <p>Classic blackjack with royal payouts and perfect strategy</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-star"></i> RTP: 99.5%</span>
+                            <span><i class="fas fa-leaf"></i> Low Volatility</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="game-image">
+                        <img src="/images/games/roulette-royal.jpg" alt="Royal Roulette">
+                        <div class="game-overlay">
+                            <button class="btn btn-primary" onclick="playGame('roulette-royal')">
+                                <i class="fas fa-play"></i> Play Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Royal Roulette</h3>
+                        <p>European roulette with royal betting options and animations</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-star"></i> RTP: 97.3%</span>
+                            <span><i class="fas fa-balance-scale"></i> Medium Volatility</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="games-cta">
+                <button class="btn btn-primary btn-large" onclick="window.location.href='/games'">
+                    View All Games
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section class="promotions" id="promotions">
+        <div class="container">
+            <h2 class="section-title">Exclusive Promotions</h2>
+            <div class="promotions-grid">
+                <div class="promo-card" data-aos="fade-right">
+                    <div class="promo-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="promo-content">
+                        <h3>Welcome Bonus</h3>
+                        <p>Get 200% bonus up to $1000 on your first deposit</p>
+                        <button class="btn btn-outline">Claim Now</button>
+                    </div>
+                </div>
+                <div class="promo-card" data-aos="fade-left">
+                    <div class="promo-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="promo-content">
+                        <h3>VIP Program</h3>
+                        <p>Exclusive rewards and personalized service for high rollers</p>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support" id="support">
+        <div class="container">
+            <h2 class="section-title">24/7 Customer Support</h2>
+            <div class="support-content">
+                <div class="support-info">
+                    <div class="support-item">
+                        <i class="fas fa-comments"></i>
+                        <h3>Live Chat</h3>
+                        <p>Get instant help from our friendly support team</p>
+                    </div>
+                    <div class="support-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Support</h3>
+                        <p>Send us a message and we'll respond within 2 hours</p>
+                    </div>
+                    <div class="support-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone Support</h3>
+                        <p>Call us directly for urgent assistance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-crown"></i>
+                        <span>Royal Casino</span>
+                    </div>
+                    <p>Experience the ultimate in online casino gaming with Royal Casino. Secure, fair, and entertaining.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Games</h3>
+                    <ul>
+                        <li><a href="#">Slots</a></li>
+                        <li><a href="#">Table Games</a></li>
+                        <li><a href="#">Live Casino</a></li>
+                        <li><a href="#">Jackpots</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Responsible Gaming</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Payment Methods</h3>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-bitcoin"></i>
+                        <i class="fas fa-university"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Royal Casino. All rights reserved. | 18+ Only | Play Responsibly</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login to Royal Casino</h2>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="loginUsername">Username or Email</label>
+                    <input type="text" id="loginUsername" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Login</button>
+            </form>
+            <p class="auth-switch">
+                Don't have an account? <a href="#" onclick="switchModal('loginModal', 'registerModal')">Register here</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Join Royal Casino</h2>
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="registerUsername">Username</label>
+                    <input type="text" id="registerUsername" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerFirstName">First Name</label>
+                    <input type="text" id="registerFirstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerLastName">Last Name</label>
+                    <input type="text" id="registerLastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerDateOfBirth">Date of Birth</label>
+                    <input type="date" id="registerDateOfBirth" name="dateOfBirth" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+            </form>
+            <p class="auth-switch">
+                Already have an account? <a href="#" onclick="switchModal('registerModal', 'loginModal')">Login here</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

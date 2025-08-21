@@ -1,0 +1,15 @@
+Game images will be placed here.
+For now, you can use any royalty-free casino-themed images from:
+- Unsplash
+- Pexels
+- Pixabay
+
+Recommended image names:
+- royal-slots.jpg
+- blackjack-royal.jpg
+- roulette-royal.jpg
+- poker-royal.jpg
+- baccarat-royal.jpg
+- dice-royal.jpg
+- lottery-royal.jpg
+- hero-bg.jpg (for hero background)
